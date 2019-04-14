@@ -1,5 +1,8 @@
-<hello name="{{ name }}"></hello>
+<div>Angular change detection issues</div>
+<div>Check the javascript console to see when the change detection runs</div>
 <p matTooltip="tooltip">
-  Start editing to see some magic happen :)
+  This paragraph has a material tooltip.<br />
+  Move the mouse inside this paragraph and back: the Angular change detection 
+  will be triggered: <a href="https://github.com/angular/material2/issues/10306">#10306</a>
 </p>
 <div echarts [options]="options"></div>

@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, DoCheck {
     const data1 = [];
     const data2 = [];
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 5; i++) {
       xAxisData.push('category' + i);
       data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
       data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit, DoCheck {
         // formatter: params => {
         //   return '<div style="width:300px; height: 400px">working</div>';
         // },
-        // formatter: this.getTooltipFormatter(),
+        formatter: this.getTooltipFormatter(),
         confine: true
       },
       xAxis: {
@@ -46,10 +46,12 @@ export class AppComponent implements OnInit, DoCheck {
       series: [
         {
           type: 'bar',
+          barCategoryGap: '0%',
           data: data1
         },
         {
           type: 'bar',
+          barCategoryGap: '0%',
           data: data2
         }
       ]
